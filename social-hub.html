@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resala STEM — Official Embeds & Directory (Page 86 White Edition)</title>
-  
+
   <!-- Fonts Matching index.html -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -46,7 +46,7 @@
     }
 
     body {
-      font-family: 'Cairo', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background-color: var(--paper);
       color: var(--text-primary);
       line-height: 1.7;
@@ -265,28 +265,28 @@
     }
 
     .contact-item.wa:hover {
-      border-color: #25d366;
-      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.15);
-      color: #128c7e;
+      border-color: var(--gold);
+      box-shadow: 0 4px 12px rgba(212, 175, 55, 0.18);
+      color: var(--gold-dark);
     }
     .contact-item.wa svg {
-      color: #25d366;
+      color: var(--gold-dark);
     }
 
     .contact-item.yt:hover {
-      border-color: #ff0000;
-      color: #cc0000;
+      border-color: var(--crimson);
+      color: var(--crimson-dark);
     }
     .contact-item.yt svg {
-      color: #ff0000;
+      color: var(--crimson);
     }
 
     .contact-item.fb:hover {
-      border-color: #1877f2;
-      color: #1877f2;
+      border-color: var(--indigo);
+      color: var(--indigo);
     }
     .contact-item.fb svg {
-      color: #1877f2;
+      color: var(--indigo);
     }
 
     /* Page Editorial Footer */
@@ -320,7 +320,7 @@
     }
 
     /* ================================================= */
-    /* YOUTUBE SHOWCASE SECTION (FIXED WITH THUMBNAILS & IFRAMES) */
+    /* YOUTUBE SHOWCASE SECTION (CLICK-TO-PLAY IFRAMES)  */
     /* ================================================= */
     .yt-showcase-grid {
       display: grid;
@@ -357,7 +357,7 @@
       position: relative;
       width: 100%;
       padding-top: 56.25%; /* 16:9 */
-      background: #0f172a;
+      background: var(--obsidian);
       overflow: hidden;
     }
 
@@ -384,7 +384,7 @@
       border: none;
     }
 
-    /* Glowing Red Play Button Overlay */
+    /* Glowing Crimson Play Button Overlay */
     .yt-play-overlay {
       position: absolute;
       top: 50%;
@@ -392,12 +392,12 @@
       transform: translate(-50%, -50%);
       width: 68px;
       height: 48px;
-      background: rgba(255, 0, 0, 0.9);
+      background: rgba(230, 57, 70, 0.92);
       border-radius: 14px;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 6px 20px rgba(255, 0, 0, 0.4);
+      box-shadow: 0 6px 20px rgba(230, 57, 70, 0.45);
       cursor: pointer;
       transition: all 0.2s ease;
       z-index: 2;
@@ -412,7 +412,7 @@
 
     .yt-player-box:hover .yt-play-overlay {
       transform: translate(-50%, -50%) scale(1.12);
-      background: #ff0000;
+      background: var(--crimson);
     }
 
     .yt-body {
@@ -526,9 +526,10 @@
       font-weight: 700;
       padding: 4px 10px;
       border-radius: 999px;
-      background: #eff6ff;
-      color: #1d4ed8;
-      border: 1px solid #bfdbfe;
+      background: #eef2ff;
+      color: var(--indigo);
+      border: 1px solid #c7d2fe;
+      white-space: nowrap;
     }
 
     .fb-iframe-stage {
@@ -563,15 +564,19 @@
     .fb-post-link {
       font-size: 0.84rem;
       font-weight: 700;
-      color: #1877f2;
+      color: var(--indigo);
       text-decoration: none;
       display: inline-flex;
       align-items: center;
       gap: 6px;
+      word-break: break-all;
+      direction: ltr;
+      text-align: left;
     }
 
     .fb-post-link:hover {
       text-decoration: underline;
+      color: var(--obsidian);
     }
   </style>
 </head>
@@ -591,9 +596,9 @@
       <nav class="nav-pills">
         <a href="#page-youtube" class="nav-pill active">📺 YouTube Videos (9)</a>
         <a href="#page-playlist" class="nav-pill">📑 Playlist</a>
-        <a href="#page-facebook" class="nav-pill">📌 Facebook Posts (9)</a>
+        <a href="#page-facebook" class="nav-pill">📌 Facebook Posts (4)</a>
         <a href="#page-helpers" class="nav-pill">🤝 Helpers</a>
-        <a href="#page-enviros" class="nav-pill">🌱 Enviros</a>
+        <a href="#page-enviros" class="nav-pill">🌿 Enviros</a>
         <a href="#page-86-contact" class="nav-pill" style="background: var(--obsidian); color: #fff;">📞 Contact (Page 86)</a>
       </nav>
     </header>
@@ -609,7 +614,9 @@
 
       <h2 class="page-title">YouTube <span class="accent">Broadcasts &amp; Episodes</span></h2>
       <p class="page-intro">
-        كافة حلقات سلسلة «زكاة العلم نشره» وفيديوهات شروحات القبول والجامعات العالمية لطلاب مدارس STEM مع الثمب نيل عالي الدقة، المشغل المباشر، والروابط النشطة القابلة للنقر والتصوير.
+        The complete «Zakat Al-Elm Nashrah» (“Sharing Knowledge Is Charity”) series plus university-admission and
+        global higher-education explainer videos for STEM school students — with high-resolution thumbnails, a direct
+        click-to-play embedded player, and fully visible, clickable share links.
       </p>
 
       <div class="yt-showcase-grid">
@@ -617,7 +624,7 @@
         <!-- Video 1 -->
         <div class="yt-card">
           <div class="yt-player-box" id="yt-box-1">
-            <img class="yt-thumb" src="https://img.youtube.com/vi/P5MJbrXTjCg/maxresdefault.jpg" onerror="this.src='https://img.youtube.com/vi/P5MJbrXTjCg/hqdefault.jpg'" alt="دراسة الطب في أمريكا">
+            <img class="yt-thumb" src="https://img.youtube.com/vi/P5MJbrXTjCg/maxresdefault.jpg" onerror="this.src='https://img.youtube.com/vi/P5MJbrXTjCg/hqdefault.jpg'" alt="Studying Medicine in the USA">
             <div class="yt-play-overlay" onclick="loadYtIframe('yt-box-1', 'P5MJbrXTjCg')">
               <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
             </div>
@@ -625,7 +632,7 @@
           <div class="yt-body">
             <div>
               <span class="yt-ep-badge">Episode 05 • Medical Studies</span>
-              <h3 class="yt-video-title">سلسلة زكاة العلم نشره 05 : دراسة الطب في أمريكا مع نوران علي</h3>
+              <h3 class="yt-video-title">Series 05: Studying Medicine in the USA with Nouran Ali</h3>
             </div>
             <div class="yt-direct-link-box">
               <a href="https://youtu.be/P5MJbrXTjCg?si=j6FGtgoveG8a81TU" target="_blank" class="yt-full-url">
@@ -639,7 +646,7 @@
         <!-- Video 2 -->
         <div class="yt-card">
           <div class="yt-player-box" id="yt-box-2">
-            <img class="yt-thumb" src="https://img.youtube.com/vi/XbJi_Y4q5QY/maxresdefault.jpg" onerror="this.src='https://img.youtube.com/vi/XbJi_Y4q5QY/hqdefault.jpg'" alt="ازاي تروح جامعة Harvard">
+            <img class="yt-thumb" src="https://img.youtube.com/vi/XbJi_Y4q5QY/maxresdefault.jpg" onerror="this.src='https://img.youtube.com/vi/XbJi_Y4q5QY/hqdefault.jpg'" alt="How to Get into Harvard University">
             <div class="yt-play-overlay" onclick="loadYtIframe('yt-box-2', 'XbJi_Y4q5QY')">
               <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
             </div>
@@ -647,7 +654,7 @@
           <div class="yt-body">
             <div>
               <span class="yt-ep-badge">Episode 06 • Harvard University</span>
-              <h3 class="yt-video-title">سلسلة زكاة العلم نشره 06 : ازاي تروح جامعة Harvard مع أكمل حشاد</h3>
+              <h3 class="yt-video-title">Series 06: How to Get into Harvard University with Akmal Heshad</h3>
             </div>
             <div class="yt-direct-link-box">
               <a href="https://youtu.be/XbJi_Y4q5QY?si=A5Y4b8eHddmLXCZ4" target="_blank" class="yt-full-url">
@@ -661,7 +668,7 @@
         <!-- Video 3 -->
         <div class="yt-card">
           <div class="yt-player-box" id="yt-box-3">
-            <img class="yt-thumb" src="https://img.youtube.com/vi/ooLCh8Cy7lI/maxresdefault.jpg" onerror="this.src='https://img.youtube.com/vi/ooLCh8Cy7lI/hqdefault.jpg'" alt="ازاي تتقبل في MIT">
+            <img class="yt-thumb" src="https://img.youtube.com/vi/ooLCh8Cy7lI/maxresdefault.jpg" onerror="this.src='https://img.youtube.com/vi/ooLCh8Cy7lI/hqdefault.jpg'" alt="How to Get Admitted to MIT">
             <div class="yt-play-overlay" onclick="loadYtIframe('yt-box-3', 'ooLCh8Cy7lI')">
               <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
             </div>
@@ -669,7 +676,7 @@
           <div class="yt-body">
             <div>
               <span class="yt-ep-badge">Episode 28 • MIT Admissions</span>
-              <h3 class="yt-video-title">سلسلة زكاة العلم نشره 28: ازاي تتقبل في افضل جامعة في العالم "MIT" ؟</h3>
+              <h3 class="yt-video-title">Series 28: How Do You Get Admitted to the Best University in the World, “MIT”?</h3>
             </div>
             <div class="yt-direct-link-box">
               <a href="https://youtu.be/ooLCh8Cy7lI?si=JKgIUO6hYhBszAvT" target="_blank" class="yt-full-url">
@@ -683,7 +690,7 @@
         <!-- Video 4 -->
         <div class="yt-card">
           <div class="yt-player-box" id="yt-box-4">
-            <img class="yt-thumb" src="https://img.youtube.com/vi/9sc2_ISLW38/maxresdefault.jpg" onerror="this.src='https://img.youtube.com/vi/9sc2_ISLW38/hqdefault.jpg'" alt="مدارس الأمم المتحدة UWC">
+            <img class="yt-thumb" src="https://img.youtube.com/vi/9sc2_ISLW38/maxresdefault.jpg" onerror="this.src='https://img.youtube.com/vi/9sc2_ISLW38/hqdefault.jpg'" alt="UWC — United World Colleges">
             <div class="yt-play-overlay" onclick="loadYtIframe('yt-box-4', '9sc2_ISLW38')">
               <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
             </div>
@@ -691,7 +698,7 @@
           <div class="yt-body">
             <div>
               <span class="yt-ep-badge">Episode 17 • UWC Adriatic</span>
-              <h3 class="yt-video-title">سلسلة زكاة العلم نشره 17 : UWC | مدارس الأمم المتحدة مع محمد يحيى</h3>
+              <h3 class="yt-video-title">Series 17: UWC | United World Colleges with Mohamed Yahya</h3>
             </div>
             <div class="yt-direct-link-box">
               <a href="https://youtu.be/9sc2_ISLW38?si=qhTURMLzagvL0MH-" target="_blank" class="yt-full-url">
@@ -713,7 +720,7 @@
           <div class="yt-body">
             <div>
               <span class="yt-ep-badge">Episode 33 • Minerva University</span>
-              <h3 class="yt-video-title">سلسلة زكاة العلم نشره 33: ازاي تتقبل في اصعب جامعة في العالم Minerva</h3>
+              <h3 class="yt-video-title">Series 33: How Do You Get Admitted to the Hardest University in the World, Minerva?</h3>
             </div>
             <div class="yt-direct-link-box">
               <a href="https://youtu.be/1bC0RNJnngs?si=UpvHsIx3gfbo3bkT" target="_blank" class="yt-full-url">
@@ -735,7 +742,7 @@
           <div class="yt-body">
             <div>
               <span class="yt-ep-badge">Episode 68 • Northwestern University</span>
-              <h3 class="yt-video-title">سلسلة زكاة العلم نشره 68: ايه هي الـ Research universities ؟ مع روان محمد</h3>
+              <h3 class="yt-video-title">Series 68: What Are Research Universities? With Rouane Mohamed</h3>
             </div>
             <div class="yt-direct-link-box">
               <a href="https://youtu.be/n-JbNQkuacE?si=i66o1cwePx_Lw9b8" target="_blank" class="yt-full-url">
@@ -749,7 +756,7 @@
         <!-- Video 7 -->
         <div class="yt-card">
           <div class="yt-player-box" id="yt-box-7">
-            <img class="yt-thumb" src="https://img.youtube.com/vi/BYIxVsnbdOs/maxresdefault.jpg" onerror="this.src='https://img.youtube.com/vi/BYIxVsnbdOs/hqdefault.jpg'" alt="جامعة Stanford">
+            <img class="yt-thumb" src="https://img.youtube.com/vi/BYIxVsnbdOs/maxresdefault.jpg" onerror="this.src='https://img.youtube.com/vi/BYIxVsnbdOs/hqdefault.jpg'" alt="Stanford University">
             <div class="yt-play-overlay" onclick="loadYtIframe('yt-box-7', 'BYIxVsnbdOs')">
               <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
             </div>
@@ -757,7 +764,7 @@
           <div class="yt-body">
             <div>
               <span class="yt-ep-badge">Episode 90 • Stanford University</span>
-              <h3 class="yt-video-title">سلسلة زكاة العلم نشره 90: هو انا ازاي ممكن ادرس في جامعة Stanford ؟</h3>
+              <h3 class="yt-video-title">Series 90: Wait, How Could I Actually Study at Stanford University?</h3>
             </div>
             <div class="yt-direct-link-box">
               <a href="https://youtu.be/BYIxVsnbdOs?si=HST8k8Ljm3u39M8y" target="_blank" class="yt-full-url">
@@ -771,7 +778,7 @@
         <!-- Video 8 -->
         <div class="yt-card">
           <div class="yt-player-box" id="yt-box-8">
-            <img class="yt-thumb" src="https://img.youtube.com/vi/tjwoz9AKkPM/maxresdefault.jpg" onerror="this.src='https://img.youtube.com/vi/tjwoz9AKkPM/hqdefault.jpg'" alt="الدراسة في المانيا">
+            <img class="yt-thumb" src="https://img.youtube.com/vi/tjwoz9AKkPM/maxresdefault.jpg" onerror="this.src='https://img.youtube.com/vi/tjwoz9AKkPM/hqdefault.jpg'" alt="Studying in Germany">
             <div class="yt-play-overlay" onclick="loadYtIframe('yt-box-8', 'tjwoz9AKkPM')">
               <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
             </div>
@@ -779,7 +786,7 @@
           <div class="yt-body">
             <div>
               <span class="yt-ep-badge">Episode 24 • Germany & Blocked Account</span>
-              <h3 class="yt-video-title">سلسلة زكاة العلم نشره 24 : كل اللى محتاج تعرفه عن الدراسة في المانيا</h3>
+              <h3 class="yt-video-title">Series 24: Everything You Need to Know About Studying in Germany</h3>
             </div>
             <div class="yt-direct-link-box">
               <a href="https://youtu.be/tjwoz9AKkPM?si=7dCtL9rVbQCWqS1_" target="_blank" class="yt-full-url">
@@ -793,7 +800,7 @@
         <!-- Video 9 -->
         <div class="yt-card">
           <div class="yt-player-box" id="yt-box-9">
-            <img class="yt-thumb" src="https://img.youtube.com/vi/I0ERqyUxzos/maxresdefault.jpg" onerror="this.src='https://img.youtube.com/vi/I0ERqyUxzos/hqdefault.jpg'" alt="أيسف ISEF مع عمر البحيري">
+            <img class="yt-thumb" src="https://img.youtube.com/vi/I0ERqyUxzos/maxresdefault.jpg" onerror="this.src='https://img.youtube.com/vi/I0ERqyUxzos/hqdefault.jpg'" alt="ISEF with Omar Elbehairy">
             <div class="yt-play-overlay" onclick="loadYtIframe('yt-box-9', 'I0ERqyUxzos')">
               <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
             </div>
@@ -801,7 +808,7 @@
           <div class="yt-body">
             <div>
               <span class="yt-ep-badge">ISEF Guide • Omar Elbehairy</span>
-              <h3 class="yt-video-title">أيسف مع عمر البحيري | أنا وزميلي بنساعد بعض 1</h3>
+              <h3 class="yt-video-title">ISEF with Omar Elbehairy | My Teammate and I Help Each Other — Part 1</h3>
             </div>
             <div class="yt-direct-link-box">
               <a href="https://youtu.be/I0ERqyUxzos?si=4o6UteaZURTqndrn" target="_blank" class="yt-full-url">
@@ -821,23 +828,25 @@
           <span class="page-indicator-badge">Full Playlist</span>
         </div>
         <h3 style="font-family: 'Playfair Display', Georgia, serif; font-size: 1.5rem; color: var(--obsidian); font-weight: 800;">
-          قائمة تشغيل سلسلة «زكاة العلم نشره» كاملة
+          The Complete «Zakat Al-Elm Nashrah» Series Playlist
         </h3>
         <p style="color: var(--text-secondary); font-size: 0.95rem;">
-          تضم كافة الحلقات المصورة للمنح الدراسية والقبول الجامعي والأنشطة البحثية.
+          All recorded episodes covering scholarships, university admissions, and research activities in one playlist.
         </p>
 
         <!-- Playlist Link & Player -->
         <a href="https://youtube.com/playlist?list=PL38DtIiyPe662luBXhdiDYTjE-yrdJYag&si=-_IbsBqIUnVctJnl" target="_blank" class="contact-item yt" style="font-size: 1rem; font-weight: 700;">
           <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.022.26-.01.104c-.048.519-.119 1.023-.22 1.402a2.01 2.01 0 0 1-1.415 1.42c-1.16.314-5.511.334-6.182.335h-.12c-.672-.001-5.023-.021-6.182-.335a2.01 2.01 0 0 1-1.415-1.42c-.101-.38-.172-.883-.22-1.402l-.01-.104-.022-.26-.008-.104C.065 9.87.057 9.014.056 8.827v-.075c.001-.194.01-1.108.082-2.06l.008-.105.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c1.123-.302 5.288-.332 6.11-.335zM6.4 5.209v5.582l4.8-2.791L6.4 5.209z"/></svg>
-          رابط القائمة المباشر: https://youtube.com/playlist?list=PL38DtIiyPe662luBXhdiDYTjE-yrdJYag ↗
+          Direct playlist link: https://youtube.com/playlist?list=PL38DtIiyPe662luBXhdiDYTjE-yrdJYag ↗
         </a>
 
         <div class="yt-player-box" style="border-radius: 14px; border: 1px solid var(--border);">
-          <iframe 
-            src="https://www.youtube.com/embed/videoseries?list=PL38DtIiyPe662luBXhdiDYTjE-yrdJYag" 
-            title="Resala STEM Series Playlist" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/videoseries?list=PL38DtIiyPe662luBXhdiDYTjE-yrdJYag&rel=0"
+            title="Resala STEM Series Playlist"
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen>
           </iframe>
         </div>
@@ -861,7 +870,8 @@
 
       <h2 class="page-title">Facebook <span class="accent">Embedded Posts</span></h2>
       <p class="page-intro">
-        منشورات وتجارب متطوعي وقادة رسالة ستيم مدمجة عبر iframes فيسبوك الرسمية (500px) مع الروابط المباشرة لفتح المنشورات ومشاركتها.
+        Stories and experiences from Resala STEM volunteers and leaders, embedded through official Facebook post
+        iframes (500&nbsp;px wide) together with their direct links for opening and sharing each post.
       </p>
 
       <div class="fb-showcase-grid">
@@ -869,23 +879,25 @@
         <!-- Post 1 -->
         <div class="fb-post-box">
           <div class="fb-post-header">
-            <span class="fb-author-tag">1. مريم مصطفي (STEM المعادي S'22 - زويل)</span>
-            <span class="fb-branch-pill">ستيم معادي</span>
+            <span class="fb-author-tag">1. Mariam Mostafa (STEM Maadi S'22 — Zewail City)</span>
+            <span class="fb-branch-pill">STEM Maadi</span>
           </div>
           <div class="fb-iframe-stage">
-            <iframe 
+            <iframe
               class="fb-iframe-element"
-              src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FResala.STEM%2Fposts%2F482487187418769%2F&width=500&show_text=true" 
-              scrolling="no" 
-              frameborder="0" 
-              allowfullscreen="true" 
+              src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fp%2F1GrN3vpuJK%2F&width=500&show_text=true"
+              title="Facebook post by Mariam Mostafa"
+              loading="lazy"
+              scrolling="no"
+              frameborder="0"
+              allowfullscreen="true"
               allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
             </iframe>
           </div>
           <div class="fb-post-footer">
-            <a href="https://www.facebook.com/share/p/1Qi5hem3eP/" target="_blank" class="fb-post-link">
+            <a href="https://www.facebook.com/share/p/1GrN3vpuJK/" target="_blank" class="fb-post-link">
               <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/></svg>
-              https://www.facebook.com/share/p/1Qi5hem3eP/ ↗
+              https://www.facebook.com/share/p/1GrN3vpuJK/ ↗
             </a>
           </div>
         </div>
@@ -893,23 +905,25 @@
         <!-- Post 2 -->
         <div class="fb-post-box">
           <div class="fb-post-header">
-            <span class="fb-author-tag">2. يوسف مصطفي (Best Member - مدينة نصر)</span>
-            <span class="fb-branch-pill">مدينة نصر</span>
+            <span class="fb-author-tag">2. Youssef Mostafa (Best Member — Nasr City)</span>
+            <span class="fb-branch-pill">Nasr City</span>
           </div>
           <div class="fb-iframe-stage">
-            <iframe 
+            <iframe
               class="fb-iframe-element"
-              src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FResala.STEM%2Fposts%2F685954027072083%2F&width=500&show_text=true" 
-              scrolling="no" 
-              frameborder="0" 
-              allowfullscreen="true" 
+              src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fp%2F1A3acpkiVf%2F&width=500&show_text=true"
+              title="Facebook post by Youssef Mostafa"
+              loading="lazy"
+              scrolling="no"
+              frameborder="0"
+              allowfullscreen="true"
               allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
             </iframe>
           </div>
           <div class="fb-post-footer">
-            <a href="https://www.facebook.com/share/p/1A3BxD3stR/" target="_blank" class="fb-post-link">
+            <a href="https://www.facebook.com/share/p/1A3acpkiVf/" target="_blank" class="fb-post-link">
               <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/></svg>
-              https://www.facebook.com/share/p/1A3BxD3stR/ ↗
+              https://www.facebook.com/share/p/1A3acpkiVf/ ↗
             </a>
           </div>
         </div>
@@ -917,23 +931,25 @@
         <!-- Post 3 -->
         <div class="fb-post-box">
           <div class="fb-post-header">
-            <span class="fb-author-tag">3. يمنى شريف (STEM الدقهلية S'25)</span>
-            <span class="fb-branch-pill">ستيم دقهلية</span>
+            <span class="fb-author-tag">3. Yomna Sharif (STEM Dakahlia S'25)</span>
+            <span class="fb-branch-pill">STEM Dakahlia</span>
           </div>
           <div class="fb-iframe-stage">
-            <iframe 
+            <iframe
               class="fb-iframe-element"
-              src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FResala.STEM%2Fposts%2F682610497406436%2F&width=500&show_text=true" 
-              scrolling="no" 
-              frameborder="0" 
-              allowfullscreen="true" 
+              src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fp%2F1CLsXZRTiz%2F&width=500&show_text=true"
+              title="Facebook post by Yomna Sharif"
+              loading="lazy"
+              scrolling="no"
+              frameborder="0"
+              allowfullscreen="true"
               allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
             </iframe>
           </div>
           <div class="fb-post-footer">
-            <a href="https://www.facebook.com/share/p/1F8ZbiUm98/" target="_blank" class="fb-post-link">
+            <a href="https://www.facebook.com/share/p/1CLsXZRTiz/" target="_blank" class="fb-post-link">
               <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/></svg>
-              https://www.facebook.com/share/p/1F8ZbiUm98/ ↗
+              https://www.facebook.com/share/p/1CLsXZRTiz/ ↗
             </a>
           </div>
         </div>
@@ -941,143 +957,25 @@
         <!-- Post 4 -->
         <div class="fb-post-box">
           <div class="fb-post-header">
-            <span class="fb-author-tag">4. قصة متطوعة رسالة ستيم (أثر التطوع)</span>
-            <span class="fb-branch-pill">تطوع عام</span>
+            <span class="fb-author-tag">4. A Resala STEM Volunteer Story (The Impact of Volunteering)</span>
+            <span class="fb-branch-pill">General Volunteering</span>
           </div>
           <div class="fb-iframe-stage">
-            <iframe 
+            <iframe
               class="fb-iframe-element"
-              src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FResala.STEM%2Fposts%2F681449670855852%2F&width=500&show_text=true" 
-              scrolling="no" 
-              frameborder="0" 
-              allowfullscreen="true" 
+              src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fp%2F1CjcWXazr5%2F&width=500&show_text=true"
+              title="Facebook post — volunteer story"
+              loading="lazy"
+              scrolling="no"
+              frameborder="0"
+              allowfullscreen="true"
               allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
             </iframe>
           </div>
           <div class="fb-post-footer">
-            <a href="https://www.facebook.com/share/p/1HFqRNozyf/" target="_blank" class="fb-post-link">
+            <a href="https://www.facebook.com/share/p/1CjcWXazr5/" target="_blank" class="fb-post-link">
               <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/></svg>
-              https://www.facebook.com/share/p/1HFqRNozyf/ ↗
-            </a>
-          </div>
-        </div>
-
-        <!-- Post 5 -->
-        <div class="fb-post-box">
-          <div class="fb-post-header">
-            <span class="fb-author-tag">5. همس (ليدر معادي سابقاً)</span>
-            <span class="fb-branch-pill">قيادة معادي</span>
-          </div>
-          <div class="fb-iframe-stage">
-            <iframe 
-              class="fb-iframe-element"
-              src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FResala.STEM%2Fposts%2F893795279621289%2F&width=500&show_text=true" 
-              scrolling="no" 
-              frameborder="0" 
-              allowfullscreen="true" 
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-            </iframe>
-          </div>
-          <div class="fb-post-footer">
-            <a href="https://www.facebook.com/share/p/1cMHU7UxgJ/" target="_blank" class="fb-post-link">
-              <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/></svg>
-              https://www.facebook.com/share/p/1cMHU7UxgJ/ ↗
-            </a>
-          </div>
-        </div>
-
-        <!-- Post 6 -->
-        <div class="fb-post-box">
-          <div class="fb-post-header">
-            <span class="fb-author-tag">6. رغد حاتم (STEM الفيوم - أول جمهورية)</span>
-            <span class="fb-branch-pill">أول جمهورية</span>
-          </div>
-          <div class="fb-iframe-stage">
-            <iframe 
-              class="fb-iframe-element"
-              src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FResala.STEM%2Fposts%2F906675564999927%2F&width=500&show_text=true" 
-              scrolling="no" 
-              frameborder="0" 
-              allowfullscreen="true" 
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-            </iframe>
-          </div>
-          <div class="fb-post-footer">
-            <a href="https://www.facebook.com/share/p/1Gp2NbrAi8/" target="_blank" class="fb-post-link">
-              <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/></svg>
-              https://www.facebook.com/share/p/1Gp2NbrAi8/ ↗
-            </a>
-          </div>
-        </div>
-
-        <!-- Post 7 -->
-        <div class="fb-post-box">
-          <div class="fb-post-header">
-            <span class="fb-author-tag">7. قصة طالب في أنشطة ستيم والتطوع</span>
-            <span class="fb-branch-pill">تطوع وبناء</span>
-          </div>
-          <div class="fb-iframe-stage">
-            <iframe 
-              class="fb-iframe-element"
-              src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FResala.STEM%2Fposts%2F908118638188953%2F&width=500&show_text=true" 
-              scrolling="no" 
-              frameborder="0" 
-              allowfullscreen="true" 
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-            </iframe>
-          </div>
-          <div class="fb-post-footer">
-            <a href="https://www.facebook.com/share/p/19oZcX7isC/" target="_blank" class="fb-post-link">
-              <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/></svg>
-              https://www.facebook.com/share/p/19oZcX7isC/ ↗
-            </a>
-          </div>
-        </div>
-
-        <!-- Post 8 -->
-        <div class="fb-post-box">
-          <div class="fb-post-header">
-            <span class="fb-author-tag">8. مروان جريشا (ليدر أكتوبر السابق)</span>
-            <span class="fb-branch-pill">ستيم أكتوبر</span>
-          </div>
-          <div class="fb-iframe-stage">
-            <iframe 
-              class="fb-iframe-element"
-              src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FResala.STEM%2Fposts%2F914889207511896%2F&width=500&show_text=true" 
-              scrolling="no" 
-              frameborder="0" 
-              allowfullscreen="true" 
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-            </iframe>
-          </div>
-          <div class="fb-post-footer">
-            <a href="https://www.facebook.com/share/p/1JJbXpxGvs/" target="_blank" class="fb-post-link">
-              <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/></svg>
-              https://www.facebook.com/share/p/1JJbXpxGvs/ ↗
-            </a>
-          </div>
-        </div>
-
-        <!-- Post 9 -->
-        <div class="fb-post-box">
-          <div class="fb-post-header">
-            <span class="fb-author-tag">9. زياد الشافعي / هيلباوي (متطوع الفريق)</span>
-            <span class="fb-branch-pill">فريق المتطوعين</span>
-          </div>
-          <div class="fb-iframe-stage">
-            <iframe 
-              class="fb-iframe-element"
-              src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FResala.STEM%2Fposts%2F909510438049773%2F&width=500&show_text=true" 
-              scrolling="no" 
-              frameborder="0" 
-              allowfullscreen="true" 
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-            </iframe>
-          </div>
-          <div class="fb-post-footer">
-            <a href="https://www.facebook.com/share/p/1FJP4cuWRi/" target="_blank" class="fb-post-link">
-              <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/></svg>
-              https://www.facebook.com/share/p/1FJP4cuWRi/ ↗
+              https://www.facebook.com/share/p/1CjcWXazr5/ ↗
             </a>
           </div>
         </div>
@@ -1102,7 +1000,8 @@
 
       <h2 class="page-title">Resala STEM <span class="accent">Helpers</span></h2>
       <p class="page-intro">
-        الصفحات والقنوات الرسمية التابعة لفريق هيلبرز المتخصص في مساعدة الطلاب وتقديم الشروحات والتوجيه الأكاديمي.
+        The official pages and channels of the Helpers team, dedicated to supporting students with explanations and
+        academic guidance.
       </p>
 
       <div class="contact-grid">
@@ -1112,22 +1011,22 @@
 
           <a href="http://www.youtube.com/@ResalaSTEM-et5vd" target="_blank" class="contact-item yt">
             <svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16"><path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.022.26-.01.104c-.048.519-.119 1.023-.22 1.402a2.01 2.01 0 0 1-1.415 1.42c-1.16.314-5.511.334-6.182.335h-.12c-.672-.001-5.023-.021-6.182-.335a2.01 2.01 0 0 1-1.415-1.42c-.101-.38-.172-.883-.22-1.402l-.01-.104-.022-.26-.008-.104C.065 9.87.057 9.014.056 8.827v-.075c.001-.194.01-1.108.082-2.06l.008-.105.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c1.123-.302 5.288-.332 6.11-.335zM6.4 5.209v5.582l4.8-2.791L6.4 5.209z"/></svg>
-            <strong>YouTube:</strong> http://www.youtube.com/@ResalaSTEM-et5vd
+            <strong>YouTube:</strong>&nbsp;<span style="direction: ltr;">http://www.youtube.com/@ResalaSTEM-et5vd</span>
           </a>
 
           <a href="https://www.facebook.com/rshelpers?mibextid=ZbWKwL" target="_blank" class="contact-item fb">
             <svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/></svg>
-            <strong>Facebook:</strong> https://www.facebook.com/rshelpers
+            <strong>Facebook:</strong>&nbsp;<span style="direction: ltr;">https://www.facebook.com/rshelpers</span>
           </a>
 
-          <a href="https://www.facebook.com/rshelpers?mibextid=ZbWKwL" target="_blank" class="contact-item">
+          <a href="https://www.instagram.com/resalastemhelpers/" target="_blank" class="contact-item">
             <svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/></svg>
-            <strong>Instagram:</strong> https://www.facebook.com/rshelpers
+            <strong>Instagram:</strong>&nbsp;<span style="direction: ltr;">@resalastemhelpers</span>
           </a>
 
           <a href="https://www.linkedin.com/company/resala-stem-helpers/home/" target="_blank" class="contact-item">
             <svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg>
-            <strong>LinkedIn:</strong> company/resala-stem-helpers
+            <strong>LinkedIn:</strong>&nbsp;<span style="direction: ltr;">company/resala-stem-helpers</span>
           </a>
         </div>
 
@@ -1135,14 +1034,16 @@
         <div class="contact-card">
           <h4 class="sub-heading" style="color: var(--obsidian);">Live Facebook Page Embed</h4>
           <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 10px;">
-            تضمين مباشر لصفحة رسالة ستيم هيلبرز على فيسبوك:
+            Live timeline embed of the Resala STEM Helpers Facebook page:
           </p>
-          <iframe 
-            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Frshelpers&tabs=timeline&width=450&height=320&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
+          <iframe
+            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Frshelpers&tabs=timeline&width=450&height=320&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+            title="Resala STEM Helpers — Facebook Page"
+            loading="lazy"
             style="width: 100%; height: 320px; border: 1px solid var(--border); border-radius: 12px; overflow: hidden;"
-            scrolling="no" 
-            frameborder="0" 
-            allowfullscreen="true" 
+            scrolling="no"
+            frameborder="0"
+            allowfullscreen="true"
             allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
           </iframe>
         </div>
@@ -1160,31 +1061,31 @@
     <!-- ============================================================== -->
     <article class="proposal-page" id="page-enviros">
       <div class="page-top-bar">
-        <span class="page-category-tag" style="color: #128c7e;">Sustainability &amp; Ecology</span>
+        <span class="page-category-tag" style="color: var(--gold-dark);">Sustainability &amp; Ecology</span>
         <span class="page-indicator-badge">04 / 05</span>
       </div>
 
-      <h2 class="page-title">Resala STEM <span class="accent" style="color: #128c7e;">Enviros</span></h2>
+      <h2 class="page-title">Resala STEM <span class="accent" style="color: var(--gold-dark);">Enviros</span></h2>
       <p class="page-intro">
-        قناة الواتساب والمنصات الرسمية لمبادرة إنفايروس للتوعية المناخية والابتكارات الخضراء.
+        The official platforms of the Enviros initiative for climate awareness and green innovation.
       </p>
 
       <div class="contact-grid">
         <!-- Enviros WhatsApp & Instagram -->
-        <div class="contact-card" style="border-color: rgba(37, 211, 102, 0.4);">
-          <h4 class="sub-heading" style="color: #128c7e;">WhatsApp &amp; Instagram</h4>
+        <div class="contact-card" style="border-color: rgba(212, 175, 55, 0.45);">
+          <h4 class="sub-heading" style="color: var(--gold-dark);">WhatsApp &amp; Instagram</h4>
 
-          <a href="https://chat.whatsapp.com/FvQ9bz4Efag4BNu9rCDSCP" target="_blank" class="contact-item wa" style="background: #f0fdf4; border-color: #bbf7d0;">
+          <a href="https://chat.whatsapp.com/FvQ9bz4Efag4BNu9rCDSCP" target="_blank" class="contact-item wa" style="background: #fffdf5; border-color: #fde68a;">
             <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.364 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.016-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
             <div>
-              <div style="font-weight: 800; color: #128c7e;">WhatsApp Channel (رابط الانضمام)</div>
-              <div style="font-size: 0.8rem; color: #334155;">https://chat.whatsapp.com/FvQ9bz4Efag4BNu9rCDSCP</div>
+              <div style="font-weight: 800; color: var(--gold-dark);">WhatsApp Channel</div>
+              <div style="font-size: 0.8rem; color: #334155; direction: ltr; text-align: left;">https://chat.whatsapp.com/FvQ9bz4Efag4BNu9rCDSCP</div>
             </div>
           </a>
 
           <a href="https://www.instagram.com/resalastemenviros?stkn=MWozMmQ4N25iNXhhcg==" target="_blank" class="contact-item">
             <svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/></svg>
-            <strong>Instagram:</strong> @resalastemenviros
+            <strong>Instagram:</strong>&nbsp;<span style="direction: ltr;">@resalastemenviros</span>
           </a>
         </div>
 
@@ -1194,12 +1095,12 @@
 
           <a href="https://www.facebook.com/share/1KdD8mQj8h/" target="_blank" class="contact-item fb">
             <svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/></svg>
-            <strong>Facebook:</strong> https://www.facebook.com/share/1KdD8mQj8h/
+            <strong>Facebook:</strong>&nbsp;<span style="direction: ltr;">https://www.facebook.com/share/1KdD8mQj8h/</span>
           </a>
 
           <a href="https://www.linkedin.com/company/resala-stem-enviros/home/" target="_blank" class="contact-item">
             <svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg>
-            <strong>LinkedIn:</strong> company/resala-stem-enviros
+            <strong>LinkedIn:</strong>&nbsp;<span style="direction: ltr;">company/resala-stem-enviros</span>
           </a>
         </div>
       </div>
@@ -1219,59 +1120,60 @@
         <span class="page-category-tag">Contact &amp; Governance</span>
         <span class="page-indicator-badge">86 / 86</span>
       </div>
-      
-      <h2 class="page-title">Contact <span class="accent">Informations</span></h2>
+
+      <h2 class="page-title">Contact <span class="accent">Information</span></h2>
       <p class="page-intro">
-        القنوات الرسمية المركزية وأرقام مسؤولي قيادة فريق رسالة ستيم للتواصل المباشر والاستفسارات والشراكات المؤسسية.
+        Central official channels and direct phone lines of the Resala STEM leadership team for immediate contact,
+        inquiries, and institutional partnerships.
       </p>
-      
+
       <div class="contact-grid">
         <!-- Card 1: Official Institutional Channels -->
         <div class="contact-card">
           <h4 class="sub-heading" style="color: var(--crimson);">Official Institutional Channels</h4>
-          
+
           <a href="mailto:resalastem937@gmail.com" class="contact-item">
             <svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/></svg>
             resalastem937@gmail.com
           </a>
-          
+
           <a href="https://www.linkedin.com/company/resalastem/" target="_blank" rel="noopener" class="contact-item">
             <svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg>
             LinkedIn: company/resalastem
           </a>
-          
+
           <a href="https://www.facebook.com/share/1DKzzCnRdF/" target="_blank" rel="noopener" class="contact-item fb">
             <svg width="22" height="22" fill="currentColor" viewBox="0 0 16 16"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/></svg>
             Facebook: Resala STEM Page
           </a>
         </div>
-        
+
         <!-- Card 2: Leadership Direct Phone Lines -->
         <div class="contact-card">
           <h4 class="sub-heading" style="color: var(--gold-dark);">Leadership Direct Phone Lines</h4>
-          
+
           <a href="tel:01124844246" class="contact-item">
             <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/></svg>
             <strong>Shahd Gomaa:</strong>&nbsp;<span style="direction: ltr; font-family: monospace;">01124844246</span>
           </a>
-          
+
           <a href="tel:01550702122" class="contact-item">
             <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/></svg>
             <strong>Akram Soliman:</strong>&nbsp;<span style="direction: ltr; font-family: monospace;">01550702122</span>
           </a>
-          
+
           <a href="tel:01021434026" class="contact-item">
             <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/></svg>
             <strong>Nada Khaled:</strong>&nbsp;<span style="direction: ltr; font-family: monospace;">01021434026</span>
           </a>
-          
+
           <a href="tel:01104852509" class="contact-item">
             <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/></svg>
             <strong>Tawfeq Mahmoud:</strong>&nbsp;<span style="direction: ltr; font-family: monospace;">01104852509</span>
           </a>
         </div>
       </div>
-      
+
       <div class="page-editorial-footer">
         <div class="footer-brand">RESALA <span>STEM</span> CLOSING DIRECTORY</div>
         <div class="footer-page-num" style="color: var(--crimson);">PAGE 86 OF 86 • WHITE BG EDITION</div>
@@ -1281,15 +1183,16 @@
   </div>
 
   <script>
-    // Seamless YouTube Iframe Loader on Click
+    // Seamless YouTube Iframe Loader on Click (privacy-friendly embed, avoids error 153)
     function loadYtIframe(containerId, videoId) {
       const container = document.getElementById(containerId);
       if (!container) return;
       container.innerHTML = `
-        <iframe 
-          src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0" 
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&playsinline=1"
           title="YouTube Video Player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen>
         </iframe>
       `;
